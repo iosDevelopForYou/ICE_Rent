@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     private var model = Model.makeModel()
+   
     
     //MARK: - Background foto
     
@@ -108,9 +109,12 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
+   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         model.count
@@ -129,7 +133,8 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 350
     }
+   
     
 }
