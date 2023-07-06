@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     private var model = Model.makeModel()
-   
+    private var salutVC = SalutViewController()
     
     //MARK: - Background foto
     
@@ -67,9 +67,11 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
         return tableView
     }()
     
+    //MARK: - Layout
     func addViewLayout() {
         view.addSubview(titleBackView)
         view.addSubview(titleLabel)
@@ -101,26 +103,19 @@ class ViewController: UIViewController {
         self.view.addSubview(mainBackground)
         self.view.sendSubviewToBack(mainBackground)
         
-        
         addViewLayout()
-        
     }
 }
 
-extension ViewController: UITableViewDataSource {
-    
-    
+extension MainViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
-   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         model.count
     }
-    
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
@@ -129,12 +124,13 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-
-extension ViewController: UITableViewDelegate {
+extension MainViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 350
     }
-   
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(salutVC, animated: true)
+    }
 }

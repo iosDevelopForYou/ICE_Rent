@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
               window?.windowScene = windowScene
               
               // инициализируем наш главный view controller
-              let viewController = ViewController()
+              let viewController = MainViewController()
               let navigationController = UINavigationController(rootViewController: viewController)
               
               window?.rootViewController = navigationController

@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		8500235E2A555E2000F61F0B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500235D2A555E1F00F61F0B /* TableViewCell.swift */; };
 		850023602A555EC000F61F0B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500235F2A555EC000F61F0B /* Model.swift */; };
+		850023622A55D11000F61F0B /* SalutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850023612A55D11000F61F0B /* SalutViewController.swift */; };
 		8528C60E2A52E21C000C81A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528C60D2A52E21C000C81A6 /* AppDelegate.swift */; };
 		8528C6102A52E21C000C81A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528C60F2A52E21C000C81A6 /* SceneDelegate.swift */; };
-		8528C6122A52E21C000C81A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528C6112A52E21C000C81A6 /* ViewController.swift */; };
+		8528C6122A52E21C000C81A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528C6112A52E21C000C81A6 /* MainViewController.swift */; };
 		8528C6172A52E21E000C81A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8528C6162A52E21E000C81A6 /* Assets.xcassets */; };
 		8528C61A2A52E21E000C81A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8528C6182A52E21E000C81A6 /* LaunchScreen.storyboard */; };
 		8528C6252A52E21E000C81A6 /* ICE_RentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528C6242A52E21E000C81A6 /* ICE_RentTests.swift */; };
@@ -39,10 +40,11 @@
 /* Begin PBXFileReference section */
 		8500235D2A555E1F00F61F0B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8500235F2A555EC000F61F0B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		850023612A55D11000F61F0B /* SalutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalutViewController.swift; sourceTree = "<group>"; };
 		8528C60A2A52E21C000C81A6 /* ICE Rent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ICE Rent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8528C60D2A52E21C000C81A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8528C60F2A52E21C000C81A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8528C6112A52E21C000C81A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8528C6112A52E21C000C81A6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8528C6162A52E21E000C81A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8528C6192A52E21E000C81A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8528C61B2A52E21E000C81A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,7 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				8500235B2A5461AF00F61F0B /* App */,
-				8528C6112A52E21C000C81A6 /* ViewController.swift */,
+				8528C6112A52E21C000C81A6 /* MainViewController.swift */,
+				850023612A55D11000F61F0B /* SalutViewController.swift */,
 				8500235D2A555E1F00F61F0B /* TableViewCell.swift */,
 				8500235F2A555EC000F61F0B /* Model.swift */,
 				8528C6162A52E21E000C81A6 /* Assets.xcassets */,
@@ -269,7 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				850023602A555EC000F61F0B /* Model.swift in Sources */,
-				8528C6122A52E21C000C81A6 /* ViewController.swift in Sources */,
+				8528C6122A52E21C000C81A6 /* MainViewController.swift in Sources */,
+				850023622A55D11000F61F0B /* SalutViewController.swift in Sources */,
 				8500235E2A555E2000F61F0B /* TableViewCell.swift in Sources */,
 				8528C60E2A52E21C000C81A6 /* AppDelegate.swift in Sources */,
 				8528C6102A52E21C000C81A6 /* SceneDelegate.swift in Sources */,

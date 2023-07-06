@@ -11,6 +11,8 @@ class TableViewCell: UITableViewCell {
     
     lazy var indexPathCell = IndexPath()
     var model = Model.makeModel()
+    
+    //MARK: - BAckground of cell
 
     private var cellBackgroundView: UIView = {
         let view = UIView()
@@ -18,8 +20,16 @@ class TableViewCell: UITableViewCell {
         view.backgroundColor = .white
         view.layer.cornerRadius = 15
         view.alpha = 0.6
+        view.layer.shadowColor = UIColor.black.cgColor // Цвет тени
+        view.layer.shadowOpacity = 1 // Прозрачность тени (от 0 до 1)
+        view.layer.shadowOffset = CGSize(width: 2, height: 3) // Смещение тени
+        view.layer.shadowRadius = 4 // Радиус размытия тени
+        view.layer.shouldRasterize = true
+        view.layer.rasterizationScale = UIScreen.main.scale
         return view
     }()
+    
+    //MARK: - Object foto
     
     private var stadiumImageView: UIImageView = {
         let view = UIImageView()
@@ -32,10 +42,33 @@ class TableViewCell: UITableViewCell {
         return view
     }()
     
+    //MARK: - Header label
+    
+    private var objectNameLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 18, weight: .regular)
+        label.textColor = .black
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+ 
+    //MARK: -  Description in cell
+    
+    private var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 14, weight: .regular)
+        label.textColor = .black
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     func setupCell(indexPath: IndexPath) {
         indexPathCell = indexPath
-        stadiumImageView.image = model[indexPath.row].tableImage
-        
+        stadiumImageView.image = model[indexPath.row].cellObjectImage
+        objectNameLabel.text = model[indexPath.row].cellObjectName
+        descriptionLabel.text = model[indexPath.row].cellDescription
     }
     
      override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -51,6 +84,8 @@ class TableViewCell: UITableViewCell {
     private func addviewLayout() {
         contentView.addSubview(cellBackgroundView)
         contentView.addSubview(stadiumImageView)
+        contentView.addSubview(objectNameLabel)
+        contentView.addSubview(descriptionLabel)
         
         NSLayoutConstraint.activate([
         
@@ -62,7 +97,13 @@ class TableViewCell: UITableViewCell {
             stadiumImageView.topAnchor.constraint(equalTo: cellBackgroundView.topAnchor, constant: 0),
             stadiumImageView.heightAnchor.constraint(equalToConstant: 200),
             stadiumImageView.leadingAnchor.constraint(equalTo: cellBackgroundView.leadingAnchor, constant: 0),
-            stadiumImageView.trailingAnchor.constraint(equalTo: cellBackgroundView.trailingAnchor, constant: -0)
+            stadiumImageView.trailingAnchor.constraint(equalTo: cellBackgroundView.trailingAnchor, constant: -0),
+            
+            objectNameLabel.topAnchor.constraint(equalTo: stadiumImageView.bottomAnchor, constant: 10),
+            objectNameLabel.leadingAnchor.constraint(equalTo: cellBackgroundView.leadingAnchor, constant: 10),
+            
+            descriptionLabel.topAnchor.constraint(equalTo: objectNameLabel.bottomAnchor, constant: 8),
+            descriptionLabel.leadingAnchor.constraint(equalTo: cellBackgroundView.leadingAnchor, constant: 25),
             
         ])
     }
