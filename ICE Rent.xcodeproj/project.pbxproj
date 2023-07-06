@@ -10,6 +10,13 @@
 		8500235E2A555E2000F61F0B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500235D2A555E1F00F61F0B /* TableViewCell.swift */; };
 		850023602A555EC000F61F0B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500235F2A555EC000F61F0B /* Model.swift */; };
 		850023622A55D11000F61F0B /* SalutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850023612A55D11000F61F0B /* SalutViewController.swift */; };
+		850023652A56C3E900F61F0B /* KristallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850023642A56C3E900F61F0B /* KristallViewController.swift */; };
+		850023672A56C40100F61F0B /* MayakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850023662A56C40100F61F0B /* MayakViewController.swift */; };
+		850023692A56C41600F61F0B /* OrbitaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850023682A56C41600F61F0B /* OrbitaViewController.swift */; };
+		8500236B2A56C43000F61F0B /* LedoviyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500236A2A56C43000F61F0B /* LedoviyViewController.swift */; };
+		8500236D2A56C44000F61F0B /* IppodromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500236C2A56C44000F61F0B /* IppodromViewController.swift */; };
+		850023712A56DF7400F61F0B /* SalutGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850023702A56DF7400F61F0B /* SalutGallery.swift */; };
+		850023732A56E0D100F61F0B /* SalutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850023722A56E0D100F61F0B /* SalutCollectionViewCell.swift */; };
 		8528C60E2A52E21C000C81A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528C60D2A52E21C000C81A6 /* AppDelegate.swift */; };
 		8528C6102A52E21C000C81A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528C60F2A52E21C000C81A6 /* SceneDelegate.swift */; };
 		8528C6122A52E21C000C81A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528C6112A52E21C000C81A6 /* MainViewController.swift */; };
@@ -41,6 +48,13 @@
 		8500235D2A555E1F00F61F0B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8500235F2A555EC000F61F0B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		850023612A55D11000F61F0B /* SalutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalutViewController.swift; sourceTree = "<group>"; };
+		850023642A56C3E900F61F0B /* KristallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KristallViewController.swift; sourceTree = "<group>"; };
+		850023662A56C40100F61F0B /* MayakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MayakViewController.swift; sourceTree = "<group>"; };
+		850023682A56C41600F61F0B /* OrbitaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitaViewController.swift; sourceTree = "<group>"; };
+		8500236A2A56C43000F61F0B /* LedoviyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedoviyViewController.swift; sourceTree = "<group>"; };
+		8500236C2A56C44000F61F0B /* IppodromViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IppodromViewController.swift; sourceTree = "<group>"; };
+		850023702A56DF7400F61F0B /* SalutGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalutGallery.swift; sourceTree = "<group>"; };
+		850023722A56E0D100F61F0B /* SalutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalutCollectionViewCell.swift; sourceTree = "<group>"; };
 		8528C60A2A52E21C000C81A6 /* ICE Rent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ICE Rent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8528C60D2A52E21C000C81A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8528C60F2A52E21C000C81A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +103,79 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		850023632A56C39900F61F0B /* DetailViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8500236F2A56DF5500F61F0B /* Salut */,
+				850023742A56F5D400F61F0B /* Kristall */,
+				850023752A56F5E800F61F0B /* Mayak */,
+				850023762A56F5F400F61F0B /* Orbita */,
+				850023772A56F60200F61F0B /* Ledoviy */,
+				850023782A56F61600F61F0B /* Ippodrom */,
+			);
+			path = DetailViewControllers;
+			sourceTree = "<group>";
+		};
+		8500236E2A56C46700F61F0B /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8528C6112A52E21C000C81A6 /* MainViewController.swift */,
+				8500235D2A555E1F00F61F0B /* TableViewCell.swift */,
+				8500235F2A555EC000F61F0B /* Model.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		8500236F2A56DF5500F61F0B /* Salut */ = {
+			isa = PBXGroup;
+			children = (
+				850023612A55D11000F61F0B /* SalutViewController.swift */,
+				850023722A56E0D100F61F0B /* SalutCollectionViewCell.swift */,
+				850023702A56DF7400F61F0B /* SalutGallery.swift */,
+			);
+			path = Salut;
+			sourceTree = "<group>";
+		};
+		850023742A56F5D400F61F0B /* Kristall */ = {
+			isa = PBXGroup;
+			children = (
+				850023642A56C3E900F61F0B /* KristallViewController.swift */,
+			);
+			path = Kristall;
+			sourceTree = "<group>";
+		};
+		850023752A56F5E800F61F0B /* Mayak */ = {
+			isa = PBXGroup;
+			children = (
+				850023662A56C40100F61F0B /* MayakViewController.swift */,
+			);
+			path = Mayak;
+			sourceTree = "<group>";
+		};
+		850023762A56F5F400F61F0B /* Orbita */ = {
+			isa = PBXGroup;
+			children = (
+				850023682A56C41600F61F0B /* OrbitaViewController.swift */,
+			);
+			path = Orbita;
+			sourceTree = "<group>";
+		};
+		850023772A56F60200F61F0B /* Ledoviy */ = {
+			isa = PBXGroup;
+			children = (
+				8500236A2A56C43000F61F0B /* LedoviyViewController.swift */,
+			);
+			path = Ledoviy;
+			sourceTree = "<group>";
+		};
+		850023782A56F61600F61F0B /* Ippodrom */ = {
+			isa = PBXGroup;
+			children = (
+				8500236C2A56C44000F61F0B /* IppodromViewController.swift */,
+			);
+			path = Ippodrom;
+			sourceTree = "<group>";
+		};
 		8528C6012A52E21C000C81A6 = {
 			isa = PBXGroup;
 			children = (
@@ -113,10 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				8500235B2A5461AF00F61F0B /* App */,
-				8528C6112A52E21C000C81A6 /* MainViewController.swift */,
-				850023612A55D11000F61F0B /* SalutViewController.swift */,
-				8500235D2A555E1F00F61F0B /* TableViewCell.swift */,
-				8500235F2A555EC000F61F0B /* Model.swift */,
+				8500236E2A56C46700F61F0B /* MainViewController */,
+				850023632A56C39900F61F0B /* DetailViewControllers */,
 				8528C6162A52E21E000C81A6 /* Assets.xcassets */,
 				8528C6182A52E21E000C81A6 /* LaunchScreen.storyboard */,
 				8528C61B2A52E21E000C81A6 /* Info.plist */,
@@ -272,11 +357,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				850023602A555EC000F61F0B /* Model.swift in Sources */,
+				850023692A56C41600F61F0B /* OrbitaViewController.swift in Sources */,
 				8528C6122A52E21C000C81A6 /* MainViewController.swift in Sources */,
 				850023622A55D11000F61F0B /* SalutViewController.swift in Sources */,
 				8500235E2A555E2000F61F0B /* TableViewCell.swift in Sources */,
+				8500236B2A56C43000F61F0B /* LedoviyViewController.swift in Sources */,
+				850023712A56DF7400F61F0B /* SalutGallery.swift in Sources */,
 				8528C60E2A52E21C000C81A6 /* AppDelegate.swift in Sources */,
 				8528C6102A52E21C000C81A6 /* SceneDelegate.swift in Sources */,
+				8500236D2A56C44000F61F0B /* IppodromViewController.swift in Sources */,
+				850023732A56E0D100F61F0B /* SalutCollectionViewCell.swift in Sources */,
+				850023672A56C40100F61F0B /* MayakViewController.swift in Sources */,
+				850023652A56C3E900F61F0B /* KristallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
