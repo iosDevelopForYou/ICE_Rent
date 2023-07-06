@@ -9,14 +9,16 @@ import Foundation
 import UIKit
 
 struct Model {
-    var tableImage: UIImage
+    var cellObjectImage: UIImage
+    var cellObjectName: String
+    var cellDescription: String
     
     static func makeModel() -> [Model] {[
-        Model(tableImage: UIImage(named: "salut")!),
-        Model(tableImage: UIImage(named: "kristall")!),
-        Model(tableImage: UIImage(named: "mayak")!),
-        Model(tableImage: UIImage(named: "orbita")!),
-        Model(tableImage: UIImage(named: "ledoviy")!),
-        Model(tableImage: UIImage(named: "ippodrom")!)
+        Model(cellObjectImage: UIImage(named: "salut")!, cellObjectName: "Ледовая Арена - САЛЮТ", cellDescription: "- хоккей\n- фигурное катание\n- массовые катания\n- прокат коньков"),
+        Model(cellObjectImage: UIImage(named: "kristall")!, cellObjectName: "Ледовая Арена - КРИСТАЛЛ", cellDescription: "- хоккей\n- фигурное катание\n- массовые катания\n- прокат коньков"),
+        Model(cellObjectImage: UIImage(named: "mayak")!, cellObjectName: "Ледовая Арена - МАЯК", cellDescription: "- хоккей\n- фигурное катание\n- массовые катания\n- прокат коньков"),
+        Model(cellObjectImage: UIImage(named: "orbita")!, cellObjectName: "Ледовая Арена - ОРБИТА", cellDescription: "- хоккей\n- фигурное катание\n- массовые катания\n- прокат коньков"),
+        Model(cellObjectImage: UIImage(named: "ledoviy")!, cellObjectName: "Ледовая Арена - ЛЕДОВЫЙ", cellDescription: "- хоккей\n- фигурное катание\n- массовые катания\n- прокат коньков"),
+        Model(cellObjectImage: UIImage(named: "ippodrom")!, cellObjectName: "Ледовая Арена - ИППОДРОМ", cellDescription: "- хоккей\n- фигурное катание\n- массовые катания\n- прокат коньков")
     ]}
 }
