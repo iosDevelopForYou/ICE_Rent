@@ -79,12 +79,12 @@ class MainViewController: UIViewController {
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
-            titleBackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            titleBackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             titleBackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             titleBackView.heightAnchor.constraint(equalToConstant: 78),
             titleBackView.widthAnchor.constraint(equalToConstant: 258),
             
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+            titleLabel.topAnchor.constraint(equalTo: titleBackView.topAnchor, constant: 8),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
