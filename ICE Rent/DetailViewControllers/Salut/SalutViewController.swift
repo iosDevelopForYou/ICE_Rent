@@ -37,16 +37,56 @@ class SalutViewController: UIViewController {
         return collectionView
     }()
     
+    let timetableleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Выберите дату и узнайте расписание:"
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textColor = .black
+        label.sizeToFit()
+        return label
+    }()
+    
+    //MARK: - CalendarView config
+    
+    private lazy var calendarView: UICalendarView = {
+        let calendar = UICalendarView()
+        calendar.calendar = .current
+        calendar.locale = .current
+        calendar.fontDesign = .rounded
+        calendar.backgroundColor = .systemGray6
+        calendar.layer.cornerRadius = 10
+        calendar.alpha = 0.8
+        calendar.delegate = self
+        calendar.selectionBehavior = UICalendarSelectionSingleDate(delegate: self)
+        calendar.translatesAutoresizingMaskIntoConstraints = false
+        calendar.layer.shadowColor = UIColor.black.cgColor // Цвет тени
+        calendar.layer.shadowOpacity = 1 // Прозрачность тени (от 0 до 1)
+        calendar.layer.shadowOffset = CGSize(width: 3, height: 3) // Смещение тени
+        calendar.layer.shadowRadius = 5
+        return calendar
+    }()
+    
     //MARK: - Layout
     
     private func addviewLayout() {
         view.addSubview(collectionView)
+        view.addSubview(timetableleLabel)
+        view.addSubview(calendarView)
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             collectionView.heightAnchor.constraint(equalToConstant: 140),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -0),
+            
+            timetableleLabel.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 10),
+            timetableleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            
+            calendarView.topAnchor.constraint(equalTo: timetableleLabel.bottomAnchor, constant: 15),
+            calendarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            calendarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            calendarView.heightAnchor.constraint(equalToConstant: 320)
         ])
     }
     
@@ -68,8 +108,37 @@ class SalutViewController: UIViewController {
             navigationBar.largeTitleTextAttributes = attributes
         }
         title = "Ледовая Арена - САЛЮТ"
+        
     }
 }
+
+//MARK: - Calendar delegates config
+
+extension SalutViewController: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate {
+    
+    func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
+        //this way we can print date in formate that we need
+        if let selectedDate = dateComponents?.date {
+                  let dateFormatter = DateFormatter()
+                  dateFormatter.dateFormat = "dd.MM.yyyy"
+                  
+                  let formattedDate = dateFormatter.string(from: selectedDate)
+                  print(formattedDate)
+              }
+   // this way we can print single day
+//        if let day = dateComponents?.day {
+//                   print(day)
+//               }
+    }
+    
+    func dateSelection(_ selection: UICalendarSelectionSingleDate, canSelectDate dateComponents: DateComponents?) -> Bool {
+        true
+    }
+    
+    
+}
+
+//MARK: - CollectionView delegates config
 
 extension SalutViewController: UICollectionViewDataSource {
     
@@ -112,7 +181,7 @@ extension SalutViewController: UICollectionViewDelegate {
     }
 }
 
-//MARK: - Image detail view animation config
+//MARK: - Image collection view animation config
 
 extension SalutViewController {
     
