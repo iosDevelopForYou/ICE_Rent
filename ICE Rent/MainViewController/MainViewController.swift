@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .systemBlue
         view.alpha = 0.5
-        view.layer.cornerRadius = 15
+        view.layer.cornerRadius = 10
         view.layer.shadowColor = UIColor.black.cgColor // Цвет тени
         view.layer.shadowOpacity = 1 // Прозрачность тени (от 0 до 1)
         view.layer.shadowOffset = CGSize(width: 10, height: 10) // Смещение тени
@@ -134,3 +134,6 @@ extension MainViewController: UITableViewDelegate {
         self.navigationController?.pushViewController(salutVC, animated: true)
     }
 }
+
+
+
